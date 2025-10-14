@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover EcoClean's sustainable cleaning products - plant-based formulas, eco-friendly packaging, and effective cleaning solutions for every need.">
+    <title>Products - EcoClean</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2E8B57;
+            --primary-dark: #1F6B45;
+            --secondary: #FF7E5F;
+            --light: #F8F9FA;
+            --dark: #343A40;
+            --gray: #6C757D;
+            --light-gray: #E9ECEF;
+            --success: #28A745;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: #fff;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            line-height: 1.2;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .btn-secondary {
+            background-color: var(--secondary);
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #E86A4A;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .btn-small {
+            padding: 8px 16px;
+            font-size: 0.9rem;
+        }
+        
+        /* Navigation */
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+        
+        .nav-brand h2 {
+            color: var(--primary);
+            margin: 0;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-menu li {
+            margin-left: 30px;
+        }
+        
+        .nav-link {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary);
+        }
+        
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--primary);
+        }
+        
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: var(--dark);
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+        
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(rgba(46, 139, 87, 0.8), rgba(46, 139, 87, 0.9)), url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .page-header p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Product Categories */
+        .product-categories {
+            padding: 80px 0;
+            background-color: var(--light);
+        }
+        
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .category-card {
+            background-color: white;
+            padding: 40px 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .category-card.active {
+            border: 2px solid var(--primary);
+        }
+        
+        .category-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .category-card h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        /* Products Grid */
+        .products-section {
+            padding: 80px 0;
+        }
+        
+        .section-intro {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 50px;
+            color: var(--gray);
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .product-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .product-image {
+            height: 200px;
+            background-color: var(--light-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray);
+        }
+        
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: var(--secondary);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .product-info {
+            padding: 25px;
+        }
+        
+        .product-info h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .product-features {
+            list-style: none;
+            margin: 15px 0;
+        }
+        
+        .product-features li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+            font-size: 0.9rem;
+        }
+        
+        .product-features li::before {
+            content: '✓';
+            color: var(--success);
+            position: absolute;
+            left: 0;
+        }
+        
+        .product-specs {
+            display: flex;
+            justify-content: space-between;
+            margin: 15px 0;
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+        
+        .product-price {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+        
+        .price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--dark);
+        }
+        
+        .size {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        
+        /* Product Features */
+        .product-features-section {
+            padding: 80px 0;
+            background-color: var(--light);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .feature-card h4 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        /* Sustainability Section */
+        .sustainability {
+            padding: 80px 0;
+        }
+        
+        .sustainability-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .sustainability-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+        
+        .sustainability-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .sustainability-card h4 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .impact-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin: 15px 0;
+        }
+        
+        /* Certifications */
+        .certifications {
+            padding: 80px 0;
+            background-color: var(--light);
+        }
+        
+        .certs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+        
+        .cert-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+        
+        .cert-card h4 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        /* FAQ Section */
+        .faq-section {
+            padding: 80px 0;
+        }
+        
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .faq-item {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .faq-item h4 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        /* CTA Section */
+        .products-cta {
+            padding: 80px 0;
+            background: linear-gradient(rgba(46, 139, 87, 0.9), rgba(46, 139, 87, 0.9)), url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+        }
+        
+        .cta-content h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .cta-content p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-features {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        
+        .feature span {
+            display: flex;
+            align-items: center;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section h3, .footer-section h4 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-section a {
+            color: var(--light-gray);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-section a:hover {
+            color: white;
+        }
+        
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .footer-links a {
+            color: var(--light-gray);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background-color: white;
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 27px rgba(0,0,0,0.05);
+                padding: 20px 0;
+            }
+            
+            .nav-menu.active {
+                left: 0;
+            }
+            
+            .nav-menu li {
+                margin: 15px 0;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <h2>EcoClean</h2>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="products.html" class="nav-link active">Products</a></li>
+                    <li><a href="solutions.html" class="nav-link">Business Solutions</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Our Sustainable Products</h1>
+                <p>Discover our complete range of plant-based, eco-friendly cleaning solutions for every need</p>
+            </div>
+        </section>
+
+        <!-- Product Categories -->
+        <section class="product-categories">
+            <div class="container">
+                <h2>Product Categories</h2>
+                <p class="section-intro">Choose from our comprehensive range of sustainable cleaning products</p>
+                
+                <div class="categories-grid">
+                    <div class="category-card active" data-category="all-purpose">
+                        <div class="category-icon">🧼</div>
+                        <h3>All-Purpose Cleaners</h3>
+                        <p>Versatile cleaners for multiple surfaces</p>
+                    </div>
+                    <div class="category-card" data-category="bathroom">
+                        <div class="category-icon">🚽</div>
+                        <h3>Bathroom Cleaners</h3>
+                        <p>Specialized formulas for bathrooms</p>
+                    </div>
+                    <div class="category-card" data-category="kitchen">
+                        <div class="category-icon">🍳</div>
+                        <h3>Kitchen Cleaners</h3>
+                        <p>Food-safe cleaning solutions</p>
+                    </div>
+                    <div class="category-card" data-category="floor">
+                        <div class="category-icon">🧹</div>
+                        <h3>Floor Care</h3>
+                        <p>Floor cleaners for all surfaces</p>
+                    </div>
+                    <div class="category-card" data-category="laundry">
+                        <div class="category-icon">👕</div>
+                        <h3>Laundry Products</h3>
+                        <p>Eco-friendly laundry detergents</p>
+                    </div>
+                    <div class="category-card" data-category="specialty">
+                        <div class="category-icon">🔬</div>
+                        <h3>Specialty Cleaners</h3>
+                        <p>Specialized cleaning solutions</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Grid -->
+        <section class="products-section">
+            <div class="container">
+                <h2>Featured Products</h2>
+                <p class="section-intro">Our best-selling sustainable cleaning products loved by thousands of customers</p>
+                
+                <div class="products-grid">
+                    <!-- Product 1 -->
+                    <div class="product-card" data-category="all-purpose">
+                        <div class="product-image">
+                            <span>EcoClean Multi-Surface Cleaner</span>
+                            <div class="product-badge">Bestseller</div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Multi-Surface Cleaner</h3>
+                            <p>Plant-powered formula that cleans virtually any surface without harsh chemicals.</p>
+                            
+                            <ul class="product-features">
+                                <li>100% plant-based ingredients</li>
+                                <li>Biodegradable formula</li>
+                                <li>Fresh citrus scent</li>
+                                <li>No synthetic fragrances</li>
+                            </ul>
+                            
+                            <div class="product-specs">
+                                <span>EPA Safer Choice</span>
+                                <span>Cruelty-Free</span>
+                            </div>
+                            
+                            <div class="product-price">
+                                <div>
+                                    <div class="price">$8.99</div>
+                                    <div class="size">32oz Refillable Bottle</div>
+                                </div>
+                                <button class="btn btn-primary btn-small">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="product-card" data-category="bathroom">
+                        <div class="product-image">
+                            <span>EcoClean Bathroom Cleaner</span>
+                            <div class="product-badge">New Formula</div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Bathroom & Tile Cleaner</h3>
+                            <p>Powerful yet gentle cleaner that removes soap scum and hard water stains.</p>
+                            
+                            <ul class="product-features">
+                                <li>Mildew and mold prevention</li>
+                                <li>Streak-free shine</li>
+                                <li>Essential oil blend</li>
+                                <li>Septic-safe formula</li>
+                            </ul>
+                            
+                            <div class="product-specs">
+                                <span>Green Seal Certified</span>
+                                <span>Vegan</span>
+                            </div>
+                            
+                            <div class="product-price">
+                                <div>
+                                    <div class="price">$9.99</div>
+                                    <div class="size">24oz Concentrate</div>
+                                </div>
+                                <button class="btn btn-primary btn-small">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="product-card" data-category="kitchen">
+                        <div class="product-image">
+                            <span>EcoClean Kitchen Degreaser</span>
+                        </div>
+                        <div class="product-info">
+                            <h3>Kitchen Degreaser</h3>
+                            <p>Cut through tough grease and grime with our powerful plant-based formula.</p>
+                            
+                            <ul class="product-features">
+                                <li>Food-contact surface safe</li>
+                                <li>Removes baked-on grease</li>
+                                <li>Fresh lemon essence</li>
+                                <li>No chemical residues</li>
+                            </ul>
+                            
+                            <div class="product-specs">
+                                <span>USDA BioPreferred</span>
+                                <span>Non-Toxic</span>
+                            </div>
+                            
+                            <div class="product-price">
+                                <div>
+                                    <div class="price">$10.99</div>
+                                    <div class="size">28oz Spray Bottle</div>
+                                </div>
+                                <button class="btn btn-primary btn-small">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="product-card" data-category="floor">
+                        <div class="product-image">
+                            <span>EcoClean Floor Cleaner</span>
+                        </div>
+                        <div class="product-info">
+                            <h3>All-Floor Cleaner</h3>
+                            <p>Gentle yet effective cleaner safe for hardwood, tile, laminate, and vinyl.</p>
+                            
+                            <ul class="product-features">
+                                <li>No wax buildup</li>
+                                <li>Quick-drying formula</li>
+                                <li>Protects floor finishes</li>
+                                <li>Neutral pH balanced</li>
+                            </ul>
+                            
+                            <div class="product-specs">
+                                <span>Flooring Safe</span>
+                                <span>No Residue</span>
+                            </div>
+                            
+                            <div class="product-price">
+                                <div>
+                                    <div class="price">$12.99</div>
+                                    <div class="size">64oz Refill</div>
+                                </div>
+                                <button class="btn btn-primary btn-small">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 5 -->
+                    <div class="product-card" data-category="laundry">
+                        <div class="product-image">
+                            <span>EcoClean Laundry Detergent</span>
+                            <div class="product-badge">Concentrated</div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Laundry Detergent</h3>
+                            <p>Ultra-concentrated plant-based formula that gets clothes clean and fresh.</p>
+                            
+                            <ul class="product-features">
+                                <li>64 loads per bottle</li>
+                                <li>Hypoallergenic formula</li>
+                                <li>Works in all water temperatures</li>
+                                <li>HE machine compatible</li>
+                            </ul>
+                            
+                            <div class="product-specs">
+                                <span>Compact Packaging</span>
+                                <span>Dye-Free</span>
+                            </div>
+                            
+                            <div class="product-price">
+                                <div>
+                                    <div class="price">$14.99</div>
+                                    <div class="size">50oz Concentrate</div>
+                                </div>
+                                <button class="btn btn-primary btn-small">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 6 -->
+                    <div class="product-card" data-category="specialty">
+                        <div class="product-image">
+                            <span>EcoClean Glass Cleaner</span>
+                        </div>
+                        <div class="product-info">
+                            <h3>Streak-Free Glass Cleaner</h3>
+                            <p>Crystal clear cleaning for windows, mirrors, and glass surfaces.</p>
+                            
+                            <ul class="product-features">
+                                <li>Ammonia-free formula</li>
+                                <li>Streak-free shine</li>
+                                <li>Quick evaporation</li>
+                                <li>Pleasant mild scent</li>
+                            </ul>
+                            
+                            <div class="product-specs">
+                                <span>No Harsh Fumes</span>
+                                <span>VOC Compliant</span>
+                            </div>
+                            
+                            <div class="product-price">
+                                <div>
+                                    <div class="price">$7.99</div>
+                                    <div class="size">26oz Spray Bottle</div>
+                                </div>
+                                <button class="btn btn-primary btn-small">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Features -->
+        <section class="product-features-section">
+            <div class="container">
+                <h2>Why Choose EcoClean Products</h2>
+                <p class="section-intro">Our commitment to sustainability and effectiveness sets us apart</p>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🌿</div>
+                        <h4>Plant-Based Formulas</h4>
+                        <p>All our products are derived from renewable plant sources, never from petroleum.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">♻️</div>
+                        <h4>Eco-Friendly Packaging</h4>
+                        <p>Refillable containers, recycled materials, and minimal plastic usage.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💪</div>
+                        <h4>Proven Effectiveness</h4>
+                        <p>Laboratory tested and proven to clean as effectively as conventional products.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🏆</div>
+                        <h4>Third-Party Certified</h4>
+                        <p>EPA Safer Choice, Green Seal, and other prestigious certifications.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sustainability Impact -->
+        <section class="sustainability">
+            <div class="container">
+                <h2>Our Environmental Impact</h2>
+                <p class="section-intro">Every EcoClean purchase makes a positive difference for our planet</p>
+                
+                <div class="sustainability-grid">
+                    <div class="sustainability-card">
+                        <div class="sustainability-icon">🔄</div>
+                        <h4>Plastic Reduction</h4>
+                        <div class="impact-number">2.3M+</div>
+                        <p>Plastic bottles saved from landfills through our refill system</p>
+                    </div>
+                    <div class="sustainability-card">
+                        <div class="sustainability-icon">💧</div>
+                        <h4>Water Conservation</h4>
+                        <div class="impact-number">15M+</div>
+                        <p>Gallons of water saved through our concentrated formulas</p>
+                    </div>
+                    <div class="sustainability-card">
+                        <div class="sustainability-icon">📉</div>
+                        <h4>Carbon Reduction</h4>
+                        <div class="impact-number">1.8M+</div>
+                        <p>Pounds of CO2 emissions avoided through efficient shipping</p>
+                    </div>
+                    <div class="sustainability-card">
+                        <div class="sustainability-icon">🌍</div>
+                        <h4>Chemical Reduction</h4>
+                        <div class="impact-number">850K+</div>
+                        <p>Pounds of harsh chemicals kept out of waterways</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications -->
+        <section class="certifications">
+            <div class="container">
+                <h2>Our Certifications</h2>
+                <p class="section-intro">Independent verification of our environmental and safety claims</p>
+                
+                <div class="certs-grid">
+                    <div class="cert-card">
+                        <h4>EPA Safer Choice</h4>
+                        <p>All ingredients meet strict safety standards for human health and environment</p>
+                    </div>
+                    <div class="cert-card">
+                        <h4>Green Seal Certified</h4>
+                        <p>Meeting rigorous standards for sustainability and environmental leadership</p>
+                    </div>
+                    <div class="cert-card">
+                        <h4>Leaping Bunny</h4>
+                        <p>Certified cruelty-free with no animal testing at any production stage</p>
+                    </div>
+                    <div class="cert-card">
+                        <h4>Carbon Neutral</h4>
+                        <p>All manufacturing and shipping processes are carbon neutral</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h4>Are EcoClean products as effective as conventional cleaners?</h4>
+                        <p>Yes! Our products undergo rigorous testing and are proven to clean as effectively as conventional cleaners. The difference is in the ingredients - we use plant-based power instead of harsh chemicals.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>How do your refill systems work?</h4>
+                        <p>Purchase our starter kit with a durable, reusable bottle. When empty, order our concentrated refill pouches that use 80% less plastic. Simply pour the concentrate into your bottle and add water.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Are your products safe for children and pets?</h4>
+                        <p>Absolutely. All EcoClean products are formulated without harsh chemicals, synthetic fragrances, or toxic ingredients. They're safe for use around children and pets when used as directed.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Do you offer bulk purchasing for businesses?</h4>
+                        <p>Yes! We offer customized bulk purchasing options for businesses of all sizes. Contact our business solutions team for volume discounts and custom formulations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="products-cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Make the Switch?</h2>
+                    <p>Join thousands of households and businesses that have chosen sustainable cleaning with EcoClean</p>
+                    
+                    <div class="cta-features">
+                        <div class="feature">
+                            <span>✓ Free shipping on orders over $50</span>
+                        </div>
+                        <div class="feature">
+                            <span>✓ 30-day satisfaction guarantee</span>
+                        </div>
+                        <div class="feature">
+                            <span>✓ Bulk discounts available</span>
+                        </div>
+                    </div>
+                    
+                    <div class="cta-buttons">
+                        <button class="btn btn-primary">Shop All Products</button>
+                        <button class="btn btn-secondary">Request Samples</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>EcoClean</h3>
+                    <p>Providing sustainable cleaning solutions since 2011. Committed to environmental stewardship and customer satisfaction.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li>📧 hello@ecoclean.com</li>
+                        <li>📞 +1 (800) 555-ECOCLEAN</li>
+                        <li>🏢 123 Green Way, Eco City, EC 12345</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2023</span> EcoClean. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="sustainability.html">Sustainability Report</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }));
+
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Product category filtering
+        document.querySelectorAll('.category-card').forEach(card => {
+            card.addEventListener('click', function() {
+                // Remove active class from all cards
+                document.querySelectorAll('.category-card').forEach(c => {
+                    c.classList.remove('active');
+                });
+                
+                // Add active class to clicked card
+                this.classList.add('active');
+                
+                // In a real implementation, you would filter products here
+                const category = this.getAttribute('data-category');
+                console.log(`Filtering by category: ${category}`);
+            });
+        });
+
+        // Add to cart functionality
+        document.querySelectorAll('.btn-primary.btn-small').forEach(button => {
+            button.addEventListener('click', function() {
+                const productCard = this.closest('.product-card');
+                const productName = productCard.querySelector('h3').textContent;
+                alert(`Added ${productName} to your cart!`);
+            });
+        });
+    </script>
+</body>
+</html>

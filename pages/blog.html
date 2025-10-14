@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Meta -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog | AquaCraft Bottles</title>
+  <meta name="description" content="Read insights, tips, and guides on learning, exams, careers, and student life from AquaCraft Bottles mentors and experts." />
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+
+  <!-- Styles (same CSS) -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <!-- ===== Nav ===== -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo" aria-label="AquaCraft Bottles Home">
+        <img src="assets/img/logo.svg" alt="AquaCraft Bottles Logo" />
+        <span>AquaCraft Bottles</span>
+      </a>
+
+      <nav class="menu" aria-label="Primary">
+        <a href="courses.html">Courses</a>
+        <a href="live-classes.html">Live Classes</a>
+        <a href="exams.html">Exams</a>
+        <a href="results.html">Results</a>
+        <a href="blog.html" class="active">Blog</a>
+        <button class="btn ghost" id="moreNavBtn" type="button">More</button>
+      </nav>
+
+      <div class="right">
+        <a class="btn ghost" href="login.html">Sign In</a>
+        <a class="btn" href="signup.html">Get Started</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="container">
+      <h1>AquaCraft Bottles Blog</h1>
+      <p>Insights, stories, and tips to help you learn smarter, prepare better, and grow faster in your career journey.</p>
+    </div>
+  </section>
+
+  <!-- ===== Blog Posts Grid ===== -->
+  <main class="section container">
+    <h2>Latest Articles</h2>
+    <div class="blog-grid">
+      <article class="card blog-card">
+        <h3><a href="posts/sample-post.html">10 Tips for Effective Online Learning</a></h3>
+        <p class="meta">By Admin • 28 Sep 2025</p>
+        <p>Discover how to stay focused, manage your time, and make the most out of online classes.</p>
+        <a href="posts/sample-post.html" class="read">Read More →</a>
+      </article>
+
+      <article class="card blog-card">
+        <h3><a href="posts/sample-post.html">How to Prepare for Mock Tests</a></h3>
+        <p class="meta">By Mentor Team • 25 Sep 2025</p>
+        <p>Learn strategies to tackle mock exams and analyze results to improve before the real test.</p>
+        <a href="posts/sample-post.html" class="read">Read More →</a>
+      </article>
+
+      <article class="card blog-card">
+        <h3><a href="posts/sample-post.html">Design Thinking for Students</a></h3>
+        <p class="meta">By Guest Author • 20 Sep 2025</p>
+        <p>An introduction to creative problem-solving and how design thinking can boost your projects.</p>
+        <a href="posts/sample-post.html" class="read">Read More →</a>
+      </article>
+
+      <article class="card blog-card">
+        <h3><a href="posts/sample-post.html">Careers in Data Science</a></h3>
+        <p class="meta">By Career Desk • 15 Sep 2025</p>
+        <p>Explore roles, salaries, and career paths in one of the fastest-growing fields today.</p>
+        <a href="posts/sample-post.html" class="read">Read More →</a>
+      </article>
+
+      <article class="card blog-card">
+        <h3><a href="posts/sample-post.html">Balancing Work & Study</a></h3>
+        <p class="meta">By Student Mentor • 10 Sep 2025</p>
+        <p>Tips to manage your studies alongside part-time work without burning out.</p>
+        <a href="posts/sample-post.html" class="read">Read More →</a>
+      </article>
+
+      <article class="card blog-card">
+        <h3><a href="posts/sample-post.html">Top Scholarships to Apply in 2025</a></h3>
+        <p class="meta">By Scholarship Cell • 5 Sep 2025</p>
+        <p>A roundup of national and international scholarships you shouldn’t miss this year.</p>
+        <a href="posts/sample-post.html" class="read">Read More →</a>
+      </article>
+    </div>
+  </main>
+
+  <!-- ===== CTA ===== -->
+  <section class="section container">
+    <div class="cta">
+      <h2>Stay Updated with New Articles</h2>
+      <form class="inline-form" onsubmit="return false;">
+        <label for="email" class="sr-only">Email</label>
+        <input id="email" type="email" placeholder="Enter your email" required />
+        <button class="btn" type="submit">Subscribe</button>
+      </form>
+      <p class="blog-card meta">Get the best tips, resources, and updates delivered straight to your inbox.</p>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="grid-2">
+        <div>
+          <h4>AquaCraft Bottles</h4>
+          <p class="blog-card meta">Articles and insights to guide your academic and career journey.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <p class="blog-card meta">
+            <a href="privacy.html">Privacy</a> •
+            <a href="terms.html">Terms</a> •
+            <a href="sitemap.html">Sitemap</a>
+          </p>
+        </div>
+      </div>
+      <p class="blog-card meta">© 2025 AquaCraft Bottles. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ===== More Nav Modal ===== -->
+  <div class="modal-backdrop" id="moreNavModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal">
+      <h3>More Pages</h3>
+      <div class="grid-2" style="margin-top:12px">
+        <div>
+          <ul>
+            <li><a href="scholarships.html">Scholarships</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="admissions.html">Admissions</a></li>
+            <li><a href="fees.html">Fees & Financing</a></li>
+            <li><a href="placements.html">Placements</a></li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li><a href="alumni.html">Alumni</a></li>
+            <li><a href="events.html">Events / Webinars</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="prospectus.html">Download Prospectus</a></li>
+          </ul>
+        </div>
+      </div>
+      <div style="margin-top:16px; display:flex; gap:8px; justify-content:flex-end">
+        <button class="btn ghost" id="closeMoreNav">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Minimal JS for modal ===== -->
+  <script>
+    (function () {
+      const openBtn = document.getElementById('moreNavBtn');
+      const modal = document.getElementById('moreNavModal');
+      const closeBtn = document.getElementById('closeMoreNav');
+
+      if (!openBtn || !modal) return;
+
+      const open = () => { modal.style.display = 'flex'; modal.setAttribute('aria-hidden', 'false'); };
+      const close = () => { modal.style.display = 'none'; modal.setAttribute('aria-hidden', 'true'); };
+
+      openBtn.addEventListener('click', open);
+      closeBtn && closeBtn.addEventListener('click', close);
+      modal.addEventListener('click', (e) => { if (e.target === modal) close(); });
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+
+      close();
+    })();
+  </script>
+</body>
+</html>

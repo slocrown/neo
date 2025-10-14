@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about AquaCraft Bottles - Our history, mission, values, and commitment to sustainable water bottle manufacturing.">
+    <title>About Us - AquaCraft Bottles</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2E8B57;
+            --primary-dark: #1F6B45;
+            --secondary: #FF7E5F;
+            --light: #F8F9FA;
+            --dark: #343A40;
+            --gray: #6C757D;
+            --light-gray: #E9ECEF;
+            --success: #28A745;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: #fff;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            line-height: 1.2;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .btn-secondary {
+            background-color: var(--secondary);
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #E86A4A;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        /* Navigation */
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+        
+        .nav-brand h2 {
+            color: var(--primary);
+            margin: 0;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-menu li {
+            margin-left: 30px;
+        }
+        
+        .nav-link {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary);
+        }
+        
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--primary);
+        }
+        
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: var(--dark);
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+        
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(rgba(46, 139, 87, 0.8), rgba(46, 139, 87, 0.9)), url('https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .page-header p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Company Story */
+        .company-story {
+            padding: 80px 0;
+        }
+        
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .story-content h2 {
+            color: var(--primary);
+        }
+        
+        .story-content p {
+            margin-bottom: 20px;
+            color: var(--gray);
+        }
+        
+        .milestones {
+            margin-top: 30px;
+        }
+        
+        .milestone {
+            display: flex;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        
+        .year {
+            font-weight: 700;
+            color: var(--primary);
+            min-width: 80px;
+        }
+        
+        .story-image {
+            background-color: var(--light);
+            border-radius: 8px;
+            overflow: hidden;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .image-placeholder {
+            color: var(--gray);
+            text-align: center;
+        }
+        
+        /* Mission & Vision */
+        .mission-vision {
+            padding: 80px 0;
+            background-color: var(--light);
+        }
+        
+        .mv-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        
+        .mv-card {
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            border-top: 4px solid var(--primary);
+        }
+        
+        .mv-card h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        /* Values */
+        .values {
+            padding: 80px 0;
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .value-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .value-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .value-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .value-card h4 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        /* Team Section */
+        .team {
+            padding: 80px 0;
+            background-color: var(--light);
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .team-member {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+        
+        .member-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: var(--light-gray);
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .team-member h4 {
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+        
+        .position {
+            color: var(--secondary);
+            font-weight: 600;
+            display: block;
+            margin-bottom: 15px;
+        }
+        
+        /* Certifications */
+        .certifications {
+            padding: 80px 0;
+        }
+        
+        .certs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .cert-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .cert-card h4 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section h3, .footer-section h4 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-section a {
+            color: var(--light-gray);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-section a:hover {
+            color: white;
+        }
+        
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .footer-links a {
+            color: var(--light-gray);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background-color: white;
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 27px rgba(0,0,0,0.05);
+                padding: 20px 0;
+            }
+            
+            .nav-menu.active {
+                left: 0;
+            }
+            
+            .nav-menu li {
+                margin: 15px 0;
+            }
+            
+            .story-grid, .mv-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <h2>EcoClean</h2>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="products.html" class="nav-link">Products</a></li>
+                    <li><a href="solutions.html" class="nav-link">Business Solutions</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1>About AquaCraft Bottles</h1>
+                <p>Crafting sustainable hydration solutions with style and purpose since 2010</p>
+            </div>
+        </section>
+
+        <!-- Company Story -->
+        <section class="company-story">
+            <div class="container">
+                <div class="story-grid">
+                    <div class="story-content">
+                        <h2>Our Journey</h2>
+                        <p>Founded in 2010, AquaCraft Bottles emerged from a simple yet powerful vision: to create beautiful, functional water bottles that reduce our dependence on single-use plastics. What began as a small workshop with three passionate designers has blossomed into an industry leader known for innovation and sustainability.</p>
+                        
+                        <p>Our founder, Michael Anderson, combined his expertise in industrial design with a deep commitment to environmental stewardship. He recognized that sustainable products needed to be not just eco-friendly, but also desirable - beautifully designed objects that people would cherish and use daily.</p>
+                        
+                        <div class="milestones">
+                            <div class="milestone">
+                                <span class="year">2010</span>
+                                <span class="event">Founded with focus on sustainable design</span>
+                            </div>
+                            <div class="milestone">
+                                <span class="year">2013</span>
+                                <span class="event">Achieved carbon-neutral manufacturing</span>
+                            </div>
+                            <div class="milestone">
+                                <span class="year">2016</span>
+                                <span class="event">Expanded to 15 international markets</span>
+                            </div>
+                            <div class="milestone">
+                                <span class="year">2020</span>
+                                <span class="event">Launched 100% recycled material line</span>
+                            </div>
+                            <div class="milestone">
+                                <span class="year">2024</span>
+                                <span class="event">Prevented 50M+ single-use bottles from landfills</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-image">
+                        <div class="image-placeholder">
+                            <span>Our Sustainable Manufacturing Facility</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission & Vision -->
+        <section class="mission-vision">
+            <div class="container">
+                <div class="mv-grid">
+                    <div class="mv-card">
+                        <h3>Our Mission</h3>
+                        <p>To revolutionize hydration through beautifully designed, sustainable water bottles that inspire positive environmental change. We combine premium materials with eco-conscious manufacturing to create products that people love and the planet appreciates.</p>
+                    </div>
+                    <div class="mv-card">
+                        <h3>Our Vision</h3>
+                        <p>To create a world where single-use plastic bottles are obsolete. We envision communities everywhere embracing reusable hydration as a lifestyle choice, supported by products that are as beautiful as they are functional and sustainable.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values -->
+        <section class="values">
+            <div class="container">
+                <h2>Our Core Values</h2>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">🌱</div>
+                        <h4>Sustainable Innovation</h4>
+                        <p>We constantly push boundaries in eco-friendly materials and manufacturing, reducing our environmental impact with every bottle we create.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">⭐</div>
+                        <h4>Craftsmanship</h4>
+                        <p>Every bottle undergoes meticulous quality control, ensuring durability, perfect functionality, and lasting beauty that exceeds expectations.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">💡</div>
+                        <h4>Design Excellence</h4>
+                        <p>We believe sustainability should be beautiful. Our designs merge form and function to create bottles people are proud to carry.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">🤝</div>
+                        <h4>Authentic Partnerships</h4>
+                        <p>We build lasting relationships with clients, suppliers, and communities based on transparency, trust, and shared values.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">🌍</div>
+                        <h4>Global Responsibility</h4>
+                        <p>We're committed to ethical practices that benefit people and planet, from sourcing to manufacturing to community impact.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">🚀</div>
+                        <h4>Continuous Improvement</h4>
+                        <p>We never stop learning, evolving, and finding better ways to serve our customers and protect our environment.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="team">
+            <div class="container">
+                <h2>Leadership Team</h2>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="member-image">
+                            <div class="image-placeholder">
+                                <span>CEO Photo</span>
+                            </div>
+                        </div>
+                        <h4>Michael Anderson</h4>
+                        <span class="position">CEO & Founder</span>
+                        <p>With 15+ years in sustainable design, Michael's vision drives our commitment to creating beautiful products that make a difference.</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-image">
+                            <div class="image-placeholder">
+                                <span>COO Photo</span>
+                            </div>
+                        </div>
+                        <h4>Sarah Martinez</h4>
+                        <span class="position">Chief Operations Officer</span>
+                        <p>Sarah ensures our manufacturing meets the highest standards of sustainability, quality, and efficiency across all operations.</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-image">
+                            <div class="image-placeholder">
+                                <span>CDO Photo</span>
+                            </div>
+                        </div>
+                        <h4>David Kim</h4>
+                        <span class="position">Chief Design Officer</span>
+                        <p>David leads our design innovation, creating bottles that are both stunningly beautiful and functionally perfect for everyday use.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications -->
+        <section class="certifications">
+            <div class="container">
+                <h2>Our Commitments & Certifications</h2>
+                <div class="certs-grid">
+                    <div class="cert-card">
+                        <h4>Carbon Neutral</h4>
+                        <p>100% carbon-neutral manufacturing since 2013</p>
+                    </div>
+                    <div class="cert-card">
+                        <h4>B Corp Certified</h4>
+                        <p>Meeting highest standards of social and environmental performance</p>
+                    </div>
+                    <div class="cert-card">
+                        <h4>Plastic Negative</h4>
+                        <p>We remove 2x more plastic from oceans than we use</p>
+                    </div>
+                    <div class="cert-card">
+                        <h4>1% for the Planet</h4>
+                        <p>Donating 1% of annual sales to environmental causes</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AquaCraft Bottles</h3>
+                    <p>Premium sustainable water bottle manufacturer creating beautiful hydration solutions since 2010.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li>📧 hello@aquacraftbottles.com</li>
+                        <li>📞 +1 (555) 123-4567</li>
+                        <li>🏢 123 Sustainable Way, Green City, CA 90210</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2023</span> AquaCraft Bottles. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="sustainability.html">Sustainability Report</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }));
+
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

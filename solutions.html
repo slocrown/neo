@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EcoClean Business Solutions - Sustainable cleaning programs for corporations, facilities, and commercial enterprises.">
+    <title>Business Solutions - EcoClean</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2E8B57;
+            --primary-dark: #1F6B45;
+            --secondary: #FF7E5F;
+            --light: #F8F9FA;
+            --dark: #343A40;
+            --gray: #6C757D;
+            --light-gray: #E9ECEF;
+            --success: #28A745;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: #fff;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            line-height: 1.2;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .btn-secondary {
+            background-color: var(--secondary);
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #E86A4A;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        /* Navigation */
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+        
+        .nav-brand h2 {
+            color: var(--primary);
+            margin: 0;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-menu li {
+            margin-left: 30px;
+        }
+        
+        .nav-link {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary);
+        }
+        
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--primary);
+        }
+        
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: var(--dark);
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+        
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(rgba(46, 139, 87, 0.8), rgba(46, 139, 87, 0.9)), url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .page-header p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Business Intro */
+        .business-intro {
+            padding: 80px 0;
+        }
+        
+        .intro-content {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .intro-content h2 {
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .intro-content p {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            color: var(--gray);
+        }
+        
+        .intro-stats {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+        
+        .intro-stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            display: block;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+        
+        /* Business Process */
+        .business-process {
+            padding: 80px 0;
+            background-color: var(--light);
+        }
+        
+        .process-detailed {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .process-step-detailed {
+            display: flex;
+            margin-bottom: 50px;
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .step-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-right: 30px;
+            flex-shrink: 0;
+        }
+        
+        .step-content h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .step-content ul {
+            list-style: none;
+            margin-top: 15px;
+        }
+        
+        .step-content li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .step-content li::before {
+            content: '✓';
+            color: var(--success);
+            position: absolute;
+            left: 0;
+        }
+        
+        /* Solutions Options */
+        .solutions-options {
+            padding: 80px 0;
+        }
+        
+        .section-intro {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 50px;
+            color: var(--gray);
+        }
+        
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .option-category {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--primary);
+        }
+        
+        .option-category h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .option-items {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .option-item {
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        
+        .option-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        
+        .option-item h4 {
+            color: var(--dark);
+            margin-bottom: 8px;
+        }
+        
+        .option-detail {
+            display: block;
+            color: var(--secondary);
+            font-weight: 600;
+            margin-top: 8px;
+            font-size: 0.9rem;
+        }
+        
+        /* Industry Solutions */
+        .industry-solutions {
+            padding: 80px 0;
+            background-color: var(--light);
+        }
+        
+        .industry-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .industry-solution {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .industry-solution:hover {
+            transform: translateY(-5px);
+        }
+        
+        .industry-solution h4 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .industry-solution ul {
+            list-style: none;
+            margin: 15px 0;
+        }
+        
+        .industry-solution li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .industry-solution li::before {
+            content: '✓';
+            color: var(--success);
+            position: absolute;
+            left: 0;
+        }
+        
+        .solution-moq {
+            display: block;
+            color: var(--secondary);
+            font-weight: 600;
+            margin-top: 15px;
+            font-size: 0.9rem;
+        }
+        
+        /* Environmental Impact */
+        .environmental-impact {
+            padding: 80px 0;
+        }
+        
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .impact-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .impact-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .impact-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .impact-card h4 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        /* Pricing Tiers */
+        .pricing-tiers {
+            padding: 80px 0;
+            background-color: var(--light);
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .pricing-tier {
+            background-color: white;
+            padding: 40px 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+        
+        .pricing-tier:hover {
+            transform: translateY(-5px);
+        }
+        
+        .pricing-tier.featured {
+            border: 2px solid var(--primary);
+            transform: scale(1.05);
+        }
+        
+        .popular-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--secondary);
+            color: white;
+            padding: 5px 20px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .pricing-tier h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+        
+        .moq {
+            display: block;
+            color: var(--gray);
+            margin-bottom: 25px;
+            font-size: 0.9rem;
+        }
+        
+        .pricing-tier ul {
+            list-style: none;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+        
+        .pricing-tier li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .pricing-tier li::before {
+            content: '✓';
+            color: var(--success);
+            position: absolute;
+            left: 0;
+        }
+        
+        /* CTA Section */
+        .business-cta {
+            padding: 80px 0;
+            background: linear-gradient(rgba(46, 139, 87, 0.9), rgba(46, 139, 87, 0.9)), url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+        }
+        
+        .cta-content h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .cta-content p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-features {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        
+        .feature span {
+            display: flex;
+            align-items: center;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .cta-contact {
+            margin-top: 20px;
+        }
+        
+        .cta-contact p {
+            margin-bottom: 0;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section h3, .footer-section h4 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-section a {
+            color: var(--light-gray);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-section a:hover {
+            color: white;
+        }
+        
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .footer-links a {
+            color: var(--light-gray);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background-color: white;
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 27px rgba(0,0,0,0.05);
+                padding: 20px 0;
+            }
+            
+            .nav-menu.active {
+                left: 0;
+            }
+            
+            .nav-menu li {
+                margin: 15px 0;
+            }
+            
+            .process-step-detailed {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .step-number {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+            
+            .pricing-tier.featured {
+                transform: none;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <h2>EcoClean</h2>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="products.html" class="nav-link">Products</a></li>
+                    <li><a href="solutions.html" class="nav-link active">Business Solutions</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Business Solutions</h1>
+                <p>Comprehensive sustainable cleaning programs for corporations, facilities, and commercial enterprises</p>
+            </div>
+        </section>
+
+        <!-- Business Intro -->
+        <section class="business-intro">
+            <div class="container">
+                <div class="intro-content">
+                    <h2>Transform Your Cleaning Operations</h2>
+                    <p>At EcoClean, we partner with businesses to implement sustainable cleaning programs that reduce environmental impact while maintaining exceptional cleanliness standards. Our comprehensive solutions are tailored to your specific industry needs and sustainability goals.</p>
+                    
+                    <div class="intro-stats">
+                        <div class="intro-stat">
+                            <span class="stat-number">250+</span>
+                            <span class="stat-label">Business Partners</span>
+                        </div>
+                        <div class="intro-stat">
+                            <span class="stat-number">98%</span>
+                            <span class="stat-label">Client Satisfaction Rate</span>
+                        </div>
+                        <div class="intro-stat">
+                            <span class="stat-number">45%</span>
+                            <span class="stat-label">Avg. Cost Reduction</span>
+                        </div>
+                        <div class="intro-stat">
+                            <span class="stat-number">2M+</span>
+                            <span class="stat-label">Plastic Bottles Saved</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Business Process -->
+        <section class="business-process">
+            <div class="container">
+                <h2>Our Business Partnership Process</h2>
+                <div class="process-detailed">
+                    <div class="process-step-detailed">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Needs Assessment & Sustainability Audit</h3>
+                            <p>We begin with a comprehensive analysis of your current cleaning practices, environmental impact, and sustainability goals. Our experts conduct on-site assessments to identify opportunities for improvement.</p>
+                            <ul>
+                                <li>Current practice evaluation and impact analysis</li>
+                                <li>Sustainability goal alignment and target setting</li>
+                                <li>Facility-specific requirements assessment</li>
+                                <li>Budget analysis and ROI projections</li>
+                                <li>Customized solution roadmap development</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="process-step-detailed">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Custom Program Design & Planning</h3>
+                            <p>Based on our assessment, we design a tailored cleaning program that addresses your specific needs while maximizing environmental benefits and cost savings.</p>
+                            <ul>
+                                <li>Product selection and formulation customization</li>
+                                <li>Equipment and dispensing system recommendations</li>
+                                <li>Staff training program development</li>
+                                <li>Implementation timeline and milestone planning</li>
+                                <li>Performance metrics and reporting framework</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="process-step-detailed">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Implementation & Staff Training</h3>
+                            <p>We oversee the complete implementation of your new sustainable cleaning program, including product delivery, equipment setup, and comprehensive staff training.</p>
+                            <ul>
+                                <li>Product delivery and dispensing system installation</li>
+                                <li>Comprehensive staff training and certification</li>
+                                <li>Standard operating procedure development</li>
+                                <li>Safety protocol implementation</li>
+                                <li>Initial performance monitoring and adjustment</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="process-step-detailed">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Ongoing Support & Optimization</h3>
+                            <p>Our partnership continues with regular monitoring, performance reporting, and continuous improvement to ensure your program delivers maximum value.</p>
+                            <ul>
+                                <li>Regular performance reviews and impact reporting</li>
+                                <li>Product usage monitoring and optimization</li>
+                                <li>Staff refresher training and new hire onboarding</li>
+                                <li>Sustainability certification maintenance support</li>
+                                <li>Program expansion and scaling guidance</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solutions Options -->
+        <section class="solutions-options">
+            <div class="container">
+                <h2>Comprehensive Cleaning Solutions</h2>
+                <p class="section-intro">Choose from our extensive range of sustainable cleaning programs tailored to your business needs</p>
+                
+                <div class="options-grid">
+                    <div class="option-category">
+                        <h3>🌿 Product Solutions</h3>
+                        <div class="option-items">
+                            <div class="option-item">
+                                <h4>Concentrated Cleaning Systems</h4>
+                                <p>Reduce plastic waste by up to 90% with our ultra-concentrated formulas and reusable dispensing systems.</p>
+                                <span class="option-detail">Impact: 90% plastic reduction</span>
+                            </div>
+                            <div class="option-item">
+                                <h4>Custom Formulations</h4>
+                                <p>Tailored cleaning solutions for specific industries, surfaces, and cleaning challenges.</p>
+                                <span class="option-detail">Options: Industry-specific formulas</span>
+                            </div>
+                            <div class="option-item">
+                                <h4>Green Certification Products</h4>
+                                <p>EPA Safer Choice, Green Seal, and other certified products for sustainability reporting.</p>
+                                <span class="option-detail">Options: Multiple certifications</span>
+                            </div>
+                            <div class="option-item">
+                                <h4>Specialty Cleaners</h4>
+                                <p>Hospital-grade disinfectants, heavy-duty degreasers, and specialized surface cleaners.</p>
+                                <span class="option-detail">Options: Custom applications</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="option-category">
+                        <h3>⚙️ Equipment & Systems</h3>
+                        <div class="option-items">
+                            <div class="option-item">
+                                <h4>Smart Dispensing Systems</h4>
+                                <p>Automated dilution control systems that reduce product waste and ensure consistent results.</p>
+                                <span class="option-detail">Impact: 30% product savings</span>
+                            </div>
+                            <div class="option-item">
+                                <h4>Microfiber Technology</h4>
+                                <p>Reusable cleaning cloths and mops that reduce paper waste and improve cleaning efficiency.</p>
+                                <span class="option-detail">Options: Various fiber types</span>
+                            </div>
+                            <div class="option-item">
+                                <h4>Packaging Solutions</h4>
+                                <p>Bulk containers, refillable systems, and compostable packaging to minimize waste.</p>
+                                <span class="option-detail">Options: Multiple packaging types</span>
+                            </div>
+                            <div class="option-item">
+                                <h4>Cleaning Carts & Organization</h4>
+                                <p>Efficient cleaning cart systems that improve productivity and reduce cross-contamination.</p>
+                                <span class="option-detail">Options: Custom configurations</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="option-category">
+                        <h3>📊 Program Management</h3>
+                        <div class="option-items">
+                            <div class="option-item">
+                                <h4>Sustainability Reporting</h4>
+                                <p>Comprehensive tracking and reporting of environmental impact, cost savings, and program performance.</p>
+                                <span class="option-detail">Features: Automated reporting</span>
+                            </div>
+                            <div class="option-item">
+                                <h4>Staff Training Programs</h4>
+                                <p>Certified training in green cleaning practices, product usage, and safety protocols.</p>
+                                <span class="option-detail">Options: Multiple training levels</span>
+                            </div>
+                            <div class="option-item">
+                                <h4>Inventory Management</h4>
+                                <p>Automated reordering systems and usage monitoring to optimize inventory and reduce waste.</p>
+                                <span class="option-detail">Features: Predictive ordering</span>
+                            </div>
+                            <div class="option-item">
+                                <h4>Quality Assurance</h4>
+                                <p>Regular audits, performance testing, and continuous improvement processes.</p>
+                                <span class="option-detail">Features: Performance metrics</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Industry Solutions -->
+        <section class="industry-solutions">
+            <div class="container">
+                <h2>Industry-Specific Solutions</h2>
+                <div class="industry-grid">
+                    <div class="industry-solution">
+                        <h4>🏢 Corporate Offices</h4>
+                        <p>Sustainable cleaning programs for office buildings that enhance employee wellness and support corporate sustainability goals.</p>
+                        <ul>
+                            <li>Day porter and nightly cleaning services</li>
+                            <li>Green certification support and reporting</li>
+                            <li>Employee wellness and air quality programs</li>
+                            <li>Carpet and upholstery green cleaning</li>
+                        </ul>
+                        <span class="solution-moq">Minimum: 10,000 sq ft</span>
+                    </div>
+
+                    <div class="industry-solution">
+                        <h4>🏥 Healthcare Facilities</h4>
+                        <p>EPA-registered disinfectants and green cleaning protocols that meet healthcare standards while reducing environmental impact.</p>
+                        <ul>
+                            <li>Hospital-grade sustainable disinfectants</li>
+                            <li>Infection control and prevention protocols</li>
+                            <li>Patient room and surgical suite cleaning</li>
+                            <li>Regulatory compliance support</li>
+                        </ul>
+                        <span class="solution-moq">Minimum: 25,000 sq ft</span>
+                    </div>
+
+                    <div class="industry-solution">
+                        <h4>🏨 Hospitality & Hotels</h4>
+                        <p>Guest-focused cleaning programs that deliver exceptional cleanliness while supporting brand sustainability initiatives.</p>
+                        <ul>
+                            <li>Guest room green cleaning protocols</li>
+                            <li>Public space and amenity area cleaning</li>
+                            <li>Linens and laundry sustainable programs</li>
+                            <li>Green Key and other certification support</li>
+                        </ul>
+                        <span class="solution-moq">Minimum: 50 rooms</span>
+                    </div>
+
+                    <div class="industry-solution">
+                        <h4>🏫 Educational Institutions</h4>
+                        <p>Safe, effective cleaning for schools and universities that protects student health and supports sustainability curriculum.</p>
+                        <ul>
+                            <li>Classroom and common area cleaning</li>
+                            <li>Science lab and specialty space protocols</li>
+                            <li>Athletic facility and locker room cleaning</li>
+                            <li>Student wellness and IAQ programs</li>
+                        </ul>
+                        <span class="solution-moq">Minimum: 20,000 sq ft</span>
+                    </div>
+
+                    <div class="industry-solution">
+                        <h4>🛍️ Retail & Shopping Centers</h4>
+                        <p>High-traffic cleaning solutions that maintain brand image while demonstrating environmental responsibility.</p>
+                        <ul>
+                            <li>High-traffic floor care and maintenance</li>
+                            <li>Food court and restaurant area cleaning</li>
+                            <li>Restroom and common area protocols</li>
+                            <li>Seasonal and promotional cleaning support</li>
+                        </ul>
+                        <span class="solution-moq">Minimum: 30,000 sq ft</span>
+                    </div>
+
+                    <div class="industry-solution">
+                        <h4>🏭 Industrial & Manufacturing</h4>
+                        <p>Heavy-duty cleaning solutions for industrial facilities that meet safety standards while reducing environmental impact.</p>
+                        <ul>
+                            <li>Industrial degreasing and equipment cleaning</li>
+                            <li>Floor maintenance and coating systems</li>
+                            <li>Safety compliance and regulatory support</li>
+                            <li>Waste reduction and recycling programs</li>
+                        </ul>
+                        <span class="solution-moq">Minimum: 50,000 sq ft</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Environmental Impact -->
+        <section class="environmental-impact">
+            <div class="container">
+                <h2>Measurable Environmental Impact</h2>
+                <p class="section-intro">Our business solutions deliver tangible environmental benefits that support your sustainability goals</p>
+                
+                <div class="impact-grid">
+                    <div class="impact-card">
+                        <div class="impact-icon">🌍</div>
+                        <h4>Plastic Reduction</h4>
+                        <p>Reduce single-use plastic waste by up to 90% with our concentrated systems and bulk packaging</p>
+                    </div>
+                    <div class="impact-card">
+                        <div class="impact-icon">💧</div>
+                        <h4>Water Conservation</h4>
+                        <p>Our concentrated formulas reduce water usage in manufacturing and transportation by 70%</p>
+                    </div>
+                    <div class="impact-card">
+                        <div class="impact-icon">📉</div>
+                        <h4>Carbon Footprint</h4>
+                        <p>Reduce transportation emissions by 60% through concentrated products and local manufacturing</p>
+                    </div>
+                    <div class="impact-card">
+                        <div class="impact-icon">🌿</div>
+                        <h4>Chemical Reduction</h4>
+                        <p>Plant-based formulas reduce synthetic chemical usage by 85% compared to conventional cleaners</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Tiers -->
+        <section class="pricing-tiers">
+            <div class="container">
+                <h2>Business Program Pricing</h2>
+                <div class="pricing-grid">
+                    <div class="pricing-tier">
+                        <h3>Essential</h3>
+                        <div class="price">$0.15 - $0.25 / sq ft</div>
+                        <span class="moq">Minimum: 10,000 sq ft</span>
+                        <ul>
+                            <li>Basic green cleaning products</li>
+                            <li>Standard dispensing systems</li>
+                            <li>Initial staff training</li>
+                            <li>Quarterly performance review</li>
+                            <li>Basic sustainability reporting</li>
+                        </ul>
+                        <button class="btn btn-outline">Get Quote</button>
+                    </div>
+
+                    <div class="pricing-tier featured">
+                        <div class="popular-badge">Most Popular</div>
+                        <h3>Professional</h3>
+                        <div class="price">$0.20 - $0.35 / sq ft</div>
+                        <span class="moq">Minimum: 25,000 sq ft</span>
+                        <ul>
+                            <li>Advanced green product portfolio</li>
+                            <li>Smart dispensing technology</li>
+                            <li>Comprehensive staff certification</li>
+                            <li>Monthly performance optimization</li>
+                            <li>Detailed sustainability analytics</li>
+                            <li>Green certification support</li>
+                        </ul>
+                        <button class="btn btn-primary">Get Quote</button>
+                    </div>
+
+                    <div class="pricing-tier">
+                        <h3>Enterprise</h3>
+                        <div class="price">Custom Pricing</div>
+                        <span class="moq">Minimum: 100,000+ sq ft</span>
+                        <ul>
+                            <li>Full custom product development</li>
+                            <li>Integrated cleaning systems</li>
+                            <li>Dedicated account management</li>
+                            <li>Continuous improvement program</li>
+                            <li>Advanced analytics dashboard</li>
+                            <li>Strategic sustainability partnership</li>
+                        </ul>
+                        <button class="btn btn-outline">Contact Sales</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="business-cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Start Your Sustainable Transformation</h2>
+                    <p>Join hundreds of forward-thinking businesses that have reduced their environmental impact while improving cleaning performance with EcoClean</p>
+                    
+                    <div class="cta-features">
+                        <div class="feature">
+                            <span>✓ Free sustainability assessment</span>
+                        </div>
+                        <div class="feature">
+                            <span>✓ Customized program proposal</span>
+                        </div>
+                        <div class="feature">
+                            <span>✓ 48-hour response time</span>
+                        </div>
+                        <div class="feature">
+                            <span>✓ Pilot program available</span>
+                        </div>
+                    </div>
+                    
+                    <div class="cta-buttons">
+                        <button class="btn btn-primary">Request Business Assessment</button>
+                        <button class="btn btn-secondary">Schedule Consultation</button>
+                    </div>
+                    
+                    <div class="cta-contact">
+                        <p>Prefer to talk? Call us at <strong>+1 (800) 555-ECOCLEAN</strong> or email <strong>business@ecoclean.com</strong></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>EcoClean</h3>
+                    <p>Providing sustainable cleaning solutions since 2011. Committed to environmental stewardship and customer satisfaction.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li>📧 hello@ecoclean.com</li>
+                        <li>📞 +1 (800) 555-ECOCLEAN</li>
+                        <li>🏢 123 Green Way, Eco City, EC 12345</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2023</span> EcoClean. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="sustainability.html">Sustainability Report</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }));
+
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Button click handlers
+        document.querySelectorAll('.btn').forEach(button => {
+            button.addEventListener('click', function() {
+                if (this.textContent.includes('Quote') || this.textContent.includes('Consultation')) {
+                    alert('Thank you for your interest! Our business solutions team will contact you within 24 hours.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

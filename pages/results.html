@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Meta -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Results | AquaCraft Bottles</title>
+  <meta name="description" content="Check published results, download scorecards, and request re-evaluation on AquaCraft Bottles." />
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+
+  <!-- Styles (same CSS) -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <!-- ===== Nav ===== -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo" aria-label="AquaCraft Bottles Home">
+        <img src="assets/img/logo.svg" alt="AquaCraft Bottles Logo" />
+        <span>AquaCraft Bottles</span>
+      </a>
+
+      <nav class="menu" aria-label="Primary">
+        <a href="courses.html">Courses</a>
+        <a href="live-classes.html">Live Classes</a>
+        <a href="exams.html">Exams</a>
+        <a href="results.html" class="active">Results</a>
+        <a href="blog.html">Blog</a>
+        <button class="btn ghost" id="moreNavBtn" type="button">More</button>
+      </nav>
+
+      <div class="right">
+        <a class="btn ghost" href="login.html">Sign In</a>
+        <a class="btn" href="signup.html">Get Started</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="container">
+      <h1>Results & Scorecards</h1>
+      <p>Find the latest published results, download your scorecard, and view grade breakdowns. For re-evaluation or discrepancies, raise a ticket from this page.</p>
+    </div>
+  </section>
+
+  <!-- ===== Result Lookup ===== -->
+  <main class="section container">
+    <h2>Check Your Result</h2>
+    <div class="grid-2">
+      <div class="card">
+        <form class="flow" onsubmit="return false;">
+          <div class="form-row">
+            <div>
+              <label for="roll">Roll / Reg. No.</label>
+              <input id="roll" type="text" placeholder="e.g., ES2025-10452" required />
+            </div>
+            <div>
+              <label for="dob">Date of Birth</label>
+              <input id="dob" type="date" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div>
+              <label for="program">Program</label>
+              <input id="program" type="text" placeholder="e.g., Full-Stack Web Dev" />
+            </div>
+            <div>
+              <label for="term">Term / Batch</label>
+              <input id="term" type="text" placeholder="e.g., Winter 2025" />
+            </div>
+          </div>
+          <button class="btn" type="submit">View Result</button>
+          <p class="blog-card meta">Note: This is a placeholder form. Wire to your API to fetch real results.</p>
+        </form>
+      </div>
+
+      <div class="card">
+        <h3>Result Status</h3>
+        <p class="blog-card meta">Typical publishing timelines after exams:</p>
+        <ul>
+          <li>Objective exams: <strong>5–7 days</strong></li>
+          <li>Practicals/Portfolio: <strong>10–14 days</strong></li>
+          <li>Re-evaluation outcomes: <strong>7–10 days</strong> after request</li>
+        </ul>
+        <div class="kudos" style="margin-top:8px">
+          <span class="pill">Admit card ID required</span>
+          <span class="pill">Name as per records</span>
+          <span class="pill">PDF scorecard available</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== Recently Published Results ===== -->
+  <section class="section container">
+    <h2>Recently Published</h2>
+    <div class="cards-grid">
+      <article class="card">
+        <h3>Full-Stack Web Dev — Term Assessment</h3>
+        <p><strong>Published:</strong> 18 Oct 2025</p>
+        <a href="#" class="btn">Download Scorecard</a>
+      </article>
+
+      <article class="card">
+        <h3>Data Science — Midterm</h3>
+        <p><strong>Published:</strong> 26 Oct 2025</p>
+        <a href="#" class="btn">Download Scorecard</a>
+      </article>
+
+      <article class="card">
+        <h3>UI/UX Design — Portfolio Review</h3>
+        <p><strong>Published:</strong> 31 Oct 2025</p>
+        <a href="#" class="btn">View Panel Feedback</a>
+      </article>
+
+      <article class="card">
+        <h3>Cybersecurity — Lab Practical</h3>
+        <p><strong>Published:</strong> 05 Nov 2025</p>
+        <a href="#" class="btn">Download Scorecard</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== Grade Bands & Analytics (static placeholders) ===== -->
+  <section class="features container">
+    <h2>Grade Bands</h2>
+    <div class="fe-grid">
+      <div class="card fe">
+        <span class="badge">A+</span>
+        <h3>90–100</h3>
+        <p>Outstanding performance with strong consistency across assessments.</p>
+      </div>
+      <div class="card fe">
+        <span class="badge">A</span>
+        <h3>80–89</h3>
+        <p>Excellent grasp of concepts and application in projects.</p>
+      </div>
+      <div class="card fe">
+        <span class="badge">B</span>
+        <h3>70–79</h3>
+        <p>Good understanding with scope to improve problem-solving speed.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Help & Re-evaluation ===== -->
+  <section class="section container">
+    <h2>Help & Re-evaluation</h2>
+    <div class="grid-2">
+      <div class="card">
+        <h3>Discrepancy or Query?</h3>
+        <p>Raise a ticket with your roll number, exam name, and supporting details.</p>
+        <a href="#" class="btn">Create Support Ticket</a>
+      </div>
+      <div class="card">
+        <h3>Apply for Re-evaluation</h3>
+        <p>Submit within <strong>7 days</strong> of result publication. Fees may apply.</p>
+        <a href="#" class="btn">Start Re-evaluation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="section container">
+    <div class="cta">
+      <h2>Get Result Alerts</h2>
+      <p>Subscribe to get notified when your program results are published.</p>
+      <form class="inline-form" onsubmit="return false;">
+        <label for="email" class="sr-only">Email</label>
+        <input id="email" type="email" placeholder="Enter your email" required />
+        <button class="btn" type="submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="grid-2">
+        <div>
+          <h4>AquaCraft Bottles</h4>
+          <p class="blog-card meta">Transparent and timely results to help you plan your next steps.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <p class="blog-card meta">
+            <a href="privacy.html">Privacy</a> •
+            <a href="terms.html">Terms</a> •
+            <a href="sitemap.html">Sitemap</a>
+          </p>
+        </div>
+      </div>
+      <p class="blog-card meta">© 2025 AquaCraft Bottles. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ===== More Nav Modal ===== -->
+  <div class="modal-backdrop" id="moreNavModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal">
+      <h3>More Pages</h3>
+      <div class="grid-2" style="margin-top:12px">
+        <div>
+          <ul>
+            <li><a href="scholarships.html">Scholarships</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="admissions.html">Admissions</a></li>
+            <li><a href="fees.html">Fees & Financing</a></li>
+            <li><a href="placements.html">Placements</a></li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li><a href="alumni.html">Alumni</a></li>
+            <li><a href="events.html">Events / Webinars</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="prospectus.html">Download Prospectus</a></li>
+          </ul>
+        </div>
+      </div>
+      <div style="margin-top:16px; display:flex; gap:8px; justify-content:flex-end">
+        <button class="btn ghost" id="closeMoreNav">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Minimal JS for modal ===== -->
+  <script>
+    (function () {
+      const openBtn = document.getElementById('moreNavBtn');
+      const modal = document.getElementById('moreNavModal');
+      const closeBtn = document.getElementById('closeMoreNav');
+
+      if (!openBtn || !modal) return;
+
+      const open = () => { modal.style.display = 'flex'; modal.setAttribute('aria-hidden', 'false'); };
+      const close = () => { modal.style.display = 'none'; modal.setAttribute('aria-hidden', 'true'); };
+
+      openBtn.addEventListener('click', open);
+      closeBtn && closeBtn.addEventListener('click', close);
+      modal.addEventListener('click', (e) => { if (e.target === modal) close(); });
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+
+      close();
+    })();
+  </script>
+</body>
+</html>

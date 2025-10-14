@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login | AquaCraft Bottles</title>
+  <meta name="description" content="Login to AquaCraft Bottles to access your courses, live classes, and dashboard." />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <!-- ===== Nav ===== -->
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo" aria-label="AquaCraft Bottles Home">
+      <img src="assets/img/logo.svg" alt="AquaCraft Bottles Logo" />
+      <span>AquaCraft Bottles</span>
+    </a>
+
+    <!-- NEW: mobile toggle button -->
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryMenu">
+      <span class="bar" aria-hidden="true"></span> Menu
+    </button>
+
+    <!-- Add id to menu -->
+    <nav class="menu" id="primaryMenu" aria-label="Primary">
+      <!-- your links here -->
+      <a href=" courses.html">Courses</a>
+      <a href=" live-classes.html">Live Classes</a>
+      <a href=" exams.html">Exams</a>
+      <a href=" results.html">Results</a>
+      <a href=" blog.html">Blog</a>
+      <button class="btn ghost" id="moreNavBtn" type="button" aria-haspopup="dialog" aria-controls="moreNavModal">More</button>
+    </nav>
+
+    <div class="right">
+      <a class="btn ghost" href=" login.html">Sign In</a>
+      <a class="btn" href=" signup.html">Get Started</a>
+    </div>
+  </div>
+</header>
+
+
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="container">
+      <h1>Welcome Back</h1>
+      <p>Log in to continue learning with AquaCraft Bottles.</p>
+    </div>
+  </section>
+
+  <!-- ===== Login Form ===== -->
+  <main class="section container">
+    <div class="grid-2">
+      <div class="card">
+        <h2>Login</h2>
+        <form class="flow" onsubmit="return false;">
+          <label for="email">Email</label>
+          <input id="email" type="email" placeholder="you@example.com" required>
+
+          <label for="password">Password</label>
+          <input id="password" type="password" placeholder="Enter your password" required>
+
+          <button class="btn" type="submit">Sign In</button>
+
+          <p class="blog-card meta">
+            <a href="#">Forgot Password?</a> •
+            <a href="signup.html">Create Account</a>
+          </p>
+        </form>
+      </div>
+      <div class="card">
+        <h3>First time here?</h3>
+        <p>Create a free AquaCraft Bottles account to access demo courses, live classes, and resources.</p>
+        <a href="signup.html" class="btn">Sign Up</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container">
+      <p class="blog-card meta">© 2025 AquaCraft Bottles. All rights reserved.</p>
+      <p class="blog-card meta"><a href="privacy.html">Privacy</a> • <a href="terms.html">Terms</a> • <a href="sitemap.html">Sitemap</a></p>
+    </div>
+  </footer>
+
+  <!-- ===== More Nav Modal ===== -->
+  <div class="modal-backdrop" id="moreNavModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal">
+      <h3>More Pages</h3>
+      <div class="grid-2" style="margin-top:12px">
+        <div>
+          <ul>
+            <li><a href="scholarships.html">Scholarships</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="admissions.html">Admissions</a></li>
+            <li><a href="fees.html">Fees & Financing</a></li>
+            <li><a href="placements.html">Placements</a></li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li><a href="alumni.html">Alumni</a></li>
+            <li><a href="events.html">Events / Webinars</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="prospectus.html">Download Prospectus</a></li>
+          </ul>
+        </div>
+      </div>
+      <div style="margin-top:16px;display:flex;gap:8px;justify-content:flex-end">
+        <button class="btn ghost" id="closeMoreNav">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Minimal JS for modal ===== -->
+  <script>
+    (function(){
+      const openBtn=document.getElementById('moreNavBtn'),
+            modal=document.getElementById('moreNavModal'),
+            closeBtn=document.getElementById('closeMoreNav');
+      if(!openBtn||!modal)return;
+      const open=()=>{modal.style.display='flex';modal.setAttribute('aria-hidden','false')};
+      const close=()=>{modal.style.display='none';modal.setAttribute('aria-hidden','true')};
+      openBtn.addEventListener('click',open);
+      closeBtn&&closeBtn.addEventListener('click',close);
+      modal.addEventListener('click',e=>{if(e.target===modal)close()});
+      document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});
+      close();
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EcoClean | Sustainable Cleaning Solutions</title>
+  <meta name="description" content="Discover EcoClean's sustainable cleaning products - plant-based formulas, eco-friendly packaging, and effective cleaning solutions." />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2E8B57;
+      --primary-dark: #1F6B45;
+      --secondary: #FF7E5F;
+      --light: #F8F9FA;
+      --dark: #343A40;
+      --gray: #6C757D;
+      --light-gray: #E9ECEF;
+      --success: #28A745;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Open Sans', sans-serif;
+      line-height: 1.6;
+      color: var(--dark);
+      background-color: #fff;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--dark);
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+      line-height: 1.2;
+    }
+    
+    h2 {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 500;
+      text-align: center;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: none;
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    .btn-primary {
+      background-color: var(--primary);
+      color: white;
+    }
+    
+    .btn-primary:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    .btn-secondary {
+      background-color: var(--secondary);
+      color: white;
+    }
+    
+    .btn-secondary:hover {
+      background-color: #E86A4A;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    .btn-outline {
+      background-color: transparent;
+      border: 2px solid var(--primary);
+      color: var(--primary);
+    }
+    
+    .btn-outline:hover {
+      background-color: var(--primary);
+      color: white;
+    }
+    
+    /* Navigation */
+    .navbar {
+      background-color: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    
+    .navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+    }
+    
+    .nav-brand h2 {
+      color: var(--primary);
+      margin: 0;
+    }
+    
+    .nav-menu {
+      display: flex;
+      list-style: none;
+    }
+    
+    .nav-menu li {
+      margin-left: 30px;
+    }
+    
+    .nav-link {
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 500;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+    
+    .nav-link:hover, .nav-link.active {
+      color: var(--primary);
+    }
+    
+    .nav-link.active::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: var(--primary);
+    }
+    
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background-color: var(--dark);
+      margin: 3px 0;
+      transition: 0.3s;
+    }
+    
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(rgba(46, 139, 87, 0.8), rgba(46, 139, 87, 0.9)), url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+      color: white;
+      padding: 100px 0;
+      text-align: center;
+    }
+    
+    .hero h1 {
+      color: white;
+      margin-bottom: 20px;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 50px;
+    }
+    
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      flex-wrap: wrap;
+    }
+    
+    .stat {
+      text-align: center;
+    }
+    
+    .stat-number {
+      display: block;
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+    
+    .stat-label {
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+    
+    /* Trust Badges */
+    .trust-badges {
+      padding: 40px 0;
+      background-color: var(--light);
+    }
+    
+    .badges-grid {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    
+    .badge {
+      background-color: white;
+      padding: 15px 25px;
+      border-radius: 4px;
+      font-weight: 600;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+    
+    /* Features Section */
+    .features {
+      padding: 80px 0;
+    }
+    
+    .section-intro {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 50px;
+      color: var(--gray);
+    }
+    
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+    
+    .feature-card {
+      background-color: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .feature-icon {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    
+    .feature-card h3 {
+      margin-bottom: 15px;
+    }
+    
+    /* Products Section */
+    .products {
+      padding: 80px 0;
+      background-color: var(--light);
+    }
+    
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    
+    .product-card {
+      background-color: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      position: relative;
+    }
+    
+    .product-badge {
+      position: absolute;
+      top: -10px;
+      right: 20px;
+      background-color: var(--secondary);
+      color: white;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+    
+    .product-card h3 {
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+    
+    .product-card ul {
+      list-style: none;
+      margin-bottom: 25px;
+    }
+    
+    .product-card li {
+      margin-bottom: 10px;
+      padding-left: 20px;
+      position: relative;
+    }
+    
+    .product-card li::before {
+      content: '✓';
+      color: var(--success);
+      position: absolute;
+      left: 0;
+    }
+    
+    .product-cta {
+      text-align: center;
+    }
+    
+    /* Industries Section */
+    .industries {
+      padding: 80px 0;
+    }
+    
+    .industries-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+    
+    .industry-card {
+      background-color: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      text-align: center;
+      border-top: 4px solid var(--primary);
+    }
+    
+    .industry-card h4 {
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+    
+    /* Process Section */
+    .process {
+      padding: 80px 0;
+      background-color: var(--light);
+    }
+    
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+    }
+    
+    .step {
+      text-align: center;
+      padding: 20px;
+    }
+    
+    .step-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      background-color: var(--primary);
+      color: white;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    
+    /* Testimonials */
+    .testimonials {
+      padding: 80px 0;
+    }
+    
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    
+    .testimonial-card {
+      background-color: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+    
+    .testimonial-text {
+      font-style: italic;
+      margin-bottom: 20px;
+      position: relative;
+    }
+    
+    .testimonial-text::before {
+      content: '"';
+      font-size: 3rem;
+      color: var(--light-gray);
+      position: absolute;
+      top: -20px;
+      left: -10px;
+      z-index: -1;
+    }
+    
+    .testimonial-author strong {
+      display: block;
+      color: var(--primary);
+    }
+    
+    .testimonial-author span {
+      font-size: 0.9rem;
+      color: var(--gray);
+    }
+    
+    /* CTA Section */
+    .cta {
+      padding: 80px 0;
+      background: linear-gradient(rgba(46, 139, 87, 0.9), rgba(46, 139, 87, 0.9)), url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+    }
+    
+    .cta h2 {
+      color: white;
+    }
+    
+    .cta p {
+      margin-bottom: 30px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+    
+    .cta-features {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    
+    .cta-features span {
+      display: flex;
+      align-items: center;
+    }
+    
+    .cta-features span::before {
+      content: '✓';
+      margin-right: 5px;
+      font-weight: bold;
+    }
+    
+    /* Footer */
+    footer {
+      background-color: var(--dark);
+      color: white;
+      padding: 60px 0 20px;
+    }
+    
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    
+    .footer-section h3, .footer-section h4 {
+      color: white;
+      margin-bottom: 20px;
+    }
+    
+    .footer-section ul {
+      list-style: none;
+    }
+    
+    .footer-section li {
+      margin-bottom: 10px;
+    }
+    
+    .footer-section a {
+      color: var(--light-gray);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    .footer-section a:hover {
+      color: white;
+    }
+    
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    
+    .footer-links {
+      display: flex;
+      gap: 20px;
+    }
+    
+    .footer-links a {
+      color: var(--light-gray);
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    
+    .footer-links a:hover {
+      color: white;
+    }
+    
+    /* Policy Modal */
+    .policy-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.7);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+      animation: fadeIn 0.3s ease;
+    }
+    
+    .policy-modal.active {
+      display: flex;
+    }
+    
+    .modal-content {
+      background-color: white;
+      padding: 40px;
+      border-radius: 8px;
+      max-width: 500px;
+      width: 90%;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      animation: slideUp 0.4s ease;
+    }
+    
+    .modal-content h3 {
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+    
+    .modal-content p {
+      margin-bottom: 25px;
+      color: var(--gray);
+      line-height: 1.6;
+    }
+    
+    .modal-buttons {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    .btn.ghost {
+      background-color: transparent;
+      border: 2px solid var(--gray);
+      color: var(--gray);
+    }
+    
+    .btn.ghost:hover {
+      background-color: var(--light-gray);
+    }
+    
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    @keyframes slideUp {
+      from { 
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to { 
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hamburger {
+        display: flex;
+      }
+      
+      .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0,0,0,0.05);
+        padding: 20px 0;
+      }
+      
+      .nav-menu.active {
+        left: 0;
+      }
+      
+      .nav-menu li {
+        margin: 15px 0;
+      }
+      
+      .hero-buttons, .cta-buttons, .modal-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .hero-stats {
+        gap: 30px;
+      }
+      
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- ===== Nav ===== -->
+  <header class="nav">
+    <nav class="navbar">
+      <div class="container">
+        <div class="nav-brand">
+          <h2>EcoClean</h2>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="products.html" class="nav-link">Products</a></li>
+          <li><a href="solutions.html" class="nav-link">Business Solutions</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== Hero Section ===== -->
+  <section class="hero">
+    <div class="container">
+      <h1>Eco-Friendly Cleaning for a Healthier Planet</h1>
+      <p class="hero-subtitle">Plant-based, biodegradable cleaning products that deliver exceptional results without harming the environment</p>
+      <div class="hero-buttons">
+        <a href="products.html" class="btn btn-primary">Shop Products</a>
+        <a href="contact.html" class="btn btn-secondary">Request Samples</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number">12+</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">50K+</span>
+          <span class="stat-label">Happy Customers</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">99%</span>
+          <span class="stat-label">Biodegradable</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Trust Badges ===== -->
+  <section class="trust-badges">
+    <div class="container">
+      <div class="badges-grid">
+        <div class="badge">Cruelty-Free Certified</div>
+        <div class="badge">EPA Safer Choice</div>
+        <div class="badge">Carbon Neutral</div>
+        <div class="badge">Plastic Negative</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Features Section ===== -->
+  <section class="features">
+    <div class="container">
+      <h2>Why Choose EcoClean</h2>
+      <p class="section-intro">We combine powerful cleaning performance with environmental responsibility</p>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🌿</div>
+          <h3>Plant-Based Formulas</h3>
+          <p>Our products are derived from renewable plant sources, free from harsh chemicals and toxins</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💪</div>
+          <h3>Powerful Cleaning</h3>
+          <p>Advanced enzyme technology that breaks down stains and grime more effectively than conventional cleaners</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">♻️</div>
+          <h3>Zero Waste Packaging</h3>
+          <p>Refillable containers and compostable packaging to minimize environmental impact</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">👃</div>
+          <h3>Fresh Scents</h3>
+          <p>Naturally derived fragrances that leave your spaces smelling clean without synthetic perfumes</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Products Section ===== -->
+  <section class="products">
+    <div class="container">
+      <h2>Our Product Range</h2>
+      <p class="section-intro">From everyday household cleaning to specialized industrial applications</p>
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="product-badge">Customer Favorite</div>
+          <h3>Home Cleaning</h3>
+          <ul>
+            <li>Multi-surface cleaners</li>
+            <li>Bathroom and kitchen formulas</li>
+            <li>Laundry detergents and softeners</li>
+            <li>Floor and wood care products</li>
+          </ul>
+          <div class="product-cta">
+            <a href="products.html" class="btn btn-outline">Shop Now</a>
+          </div>
+        </div>
+        <div class="product-card">
+          <h3>Commercial Solutions</h3>
+          <ul>
+            <li>Office building cleaning systems</li>
+            <li>Restaurant and food service cleaners</li>
+            <li>Hospitality industry products</li>
+            <li>Janitorial supplies in bulk</li>
+          </ul>
+          <div class="product-cta">
+            <a href="products.html" class="btn btn-outline">Learn More</a>
+          </div>
+        </div>
+        <div class="product-card">
+          <h3>Specialty Applications</h3>
+          <ul>
+            <li>Healthcare facility disinfectants</li>
+            <li>Industrial degreasers</li>
+            <li>Vehicle cleaning products</li>
+            <li>Pet-safe cleaning solutions</li>
+          </ul>
+          <div class="product-cta">
+            <a href="products.html" class="btn btn-outline">Explore</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Industries Section ===== -->
+  <section class="industries">
+    <div class="container">
+      <h2>Industries We Serve</h2>
+      <p class="section-intro">Customized cleaning solutions for diverse industry requirements</p>
+      <div class="industries-grid">
+        <div class="industry-card">
+          <h4>Healthcare</h4>
+          <p>EPA-approved disinfectants and sanitizers for hospitals and medical facilities</p>
+        </div>
+        <div class="industry-card">
+          <h4>Hospitality</h4>
+          <p>Complete cleaning systems for hotels, resorts, and restaurants</p>
+        </div>
+        <div class="industry-card">
+          <h4>Education</h4>
+          <p>Safe, effective cleaning products for schools and universities</p>
+        </div>
+        <div class="industry-card">
+          <h4>Retail</h4>
+          <p>Maintenance solutions for shopping centers and retail spaces</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Process Section ===== -->
+  <section class="process">
+    <div class="container">
+      <h2>How It Works</h2>
+      <p class="section-intro">Our streamlined process ensures you get the perfect cleaning solution</p>
+      <div class="process-steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h4>Assessment</h4>
+          <p>We evaluate your cleaning needs and sustainability goals</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h4>Solution Design</h4>
+          <p>Customized product selection based on your requirements</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h4>Implementation</h4>
+          <p>Product delivery and staff training if needed</p>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <h4>Support</h4>
+          <p>Ongoing maintenance and customer support</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Testimonials ===== -->
+  <section class="testimonials">
+    <div class="container">
+      <h2>What Our Customers Say</h2>
+      <p class="section-intro">Don't just take our word for it - hear from our satisfied clients</p>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <p class="testimonial-text">"Switching to EcoClean has made such a difference in our home. My kids' allergies have improved, and everything smells so fresh without that chemical odor."</p>
+          <div class="testimonial-author">
+            <strong>Jennifer Martinez</strong>
+            <span>Homeowner, Portland</span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">"As a hotel manager, maintaining clean facilities is crucial. EcoClean products perform exceptionally well and our guests frequently comment on how fresh our rooms smell."</p>
+          <div class="testimonial-author">
+            <strong>David Kim</strong>
+            <span>Hotel Manager, San Francisco</span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">"Our school district switched to EcoClean last year. Not only are we reducing our environmental impact, but we've also seen a decrease in student absences due to illness."</p>
+          <div class="testimonial-author">
+            <strong>Susan Patterson</strong>
+            <span>School Administrator, Austin</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA Section ===== -->
+  <section class="cta">
+    <div class="container">
+      <h2>Ready to Make the Switch?</h2>
+      <p>Join thousands of households and businesses that have chosen sustainable cleaning</p>
+      <div class="cta-buttons">
+        <a href="contact.html" class="btn btn-primary">Get Free Consultation</a>
+        <a href="tel:+1-800-555-1234" class="btn btn-secondary">Call Now: 800-555-ECOCLEAN</a>
+      </div>
+      <div class="cta-features">
+        <span>Free Product Samples</span>
+        <span>Custom Solutions</span>
+        <span>Bulk Discounts</span>
+        <span>Sustainability Consulting</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>EcoClean</h3>
+          <p>Providing sustainable cleaning solutions since 2011. Committed to environmental stewardship, innovation, and customer satisfaction.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="solutions.html">Business Solutions</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact Info</h4>
+          <ul>
+            <li>123 Green Way, Eco City, EC 12345</li>
+            <li>Phone: (800) 555-ECOCLEAN</li>
+            <li>Email: info@ecoclean.com</li>
+            <li>Hours: Mon-Fri 8am-6pm EST</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 EcoClean. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Sustainability Report</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== Policy Modal ===== -->
+  <div class="policy-modal active" id="policyModal">
+    <div class="modal-content">
+      <h3>Policy Update</h3>
+      <p>Do you accept the new terms and want to continue to our website?</p>
+      <div class="modal-buttons">
+        <button class="btn btn-primary" id="acceptPolicy">Yes, Continue to Site</button>
+        <button class="btn ghost" id="declinePolicy">No, I Decline</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Mobile Navigation Toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navMenu.classList.remove('active');
+    }));
+
+    // Policy Modal Logic
+    document.addEventListener('DOMContentLoaded', function() {
+      const policyModal = document.getElementById('policyModal');
+      const acceptBtn = document.getElementById('acceptPolicy');
+      const declineBtn = document.getElementById('declinePolicy');
+      
+      // Show modal immediately
+      policyModal.classList.add('active');
+      
+      // Handle accept button
+      acceptBtn.addEventListener('click', function() {
+        policyModal.classList.remove('active');
+        // Set a cookie or localStorage to remember the acceptance
+        localStorage.setItem('policyAccepted', 'true');
+        console.log('Policy accepted');
+      });
+      
+      // Handle decline button - redirect to external site or show message
+      declineBtn.addEventListener('click', function() {
+        // Option 1: Redirect to an external page
+        // window.location.href = 'https://example.com';
+        
+        // Option 2: Show a message and close modal
+        alert('To use our website, you need to accept our updated policies.');
+        policyModal.classList.remove('active');
+        
+        // Option 3: Keep modal open with additional information
+        // document.querySelector('.modal-content p').textContent = 'We respect your decision. If you change your mind, please refresh the page to see this message again.';
+        // document.querySelector('.modal-buttons').innerHTML = '<button class="btn btn-primary" onclick="location.reload()">Refresh Page</button>';
+      });
+      
+      // Check if user already accepted the policy
+      if (localStorage.getItem('policyAccepted') === 'true') {
+        policyModal.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Events & Webinars | AquaCraft Bottles</title>
+  <meta name="description" content="Attend upcoming AquaCraft Bottles webinars, workshops, and meetups." />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo"><img src="assets/img/logo.svg" alt=""><span>AquaCraft Bottles</span></a>
+      <nav class="menu"><a href="courses.html">Courses</a><a href="live-classes.html">Live Classes</a><a href="exams.html">Exams</a><a href="results.html">Results</a><a href="blog.html">Blog</a><button class="btn ghost" id="moreNavBtn" type="button">More</button></nav>
+      <div class="right"><a class="btn ghost" href="login.html">Sign In</a><a class="btn" href="signup.html">Get Started</a></div>
+    </div>
+  </header>
+
+  <section class="hero"><div class="container"><h1>Events & Webinars</h1><p>Learn from mentors, alumni, and industry leaders — live and interactive.</p></div></section>
+
+  <main class="section container">
+    <h2>Upcoming</h2>
+    <div class="cards-grid">
+      <article class="card"><h3>Portfolio Review Night</h3><p><strong>Date:</strong> 12 Oct 2025 • 7:30 PM IST<br>Live critique with UX mentors.</p><a href="#" class="btn">Register</a></article>
+      <article class="card"><h3>Career in Data Roles</h3><p><strong>Date:</strong> 18 Oct 2025 • 6:00 PM IST<br>Panel with DS/DA alumni.</p><a href="#" class="btn">Register</a></article>
+      <article class="card"><h3>Security 101 Workshop</h3><p><strong>Date:</strong> 25 Oct 2025 • 8:00 PM IST<br>Hands-on intro to pentesting.</p><a href="#" class="btn">Register</a></article>
+    </div>
+  </main>
+
+  <section class="features container">
+    <h2>Why Attend</h2>
+    <div class="fe-grid">
+      <div class="card fe"><span class="badge">Live</span><h3>Interactive Q&A</h3><p>Ask questions and get real-time feedback.</p></div>
+      <div class="card fe"><span class="badge">Recordings</span><h3>Watch Later</h3><p>All sessions available on demand.</p></div>
+      <div class="card fe"><span class="badge">Career</span><h3>Network</h3><p>Meet mentors, peers, and recruiters.</p></div>
+    </div>
+  </section>
+
+  <section class="section container"><div class="cta"><h2>Host an Event</h2><p>Are you a mentor or alum with insights to share?</p><a href="#" class="btn">Propose a Session</a></div></section>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="blog-card meta">© 2025 AquaCraft Bottles. All rights reserved.</p>
+      <p class="blog-card meta"><a href="privacy.html">Privacy</a> • <a href="terms.html">Terms</a> • <a href="sitemap.html">Sitemap</a></p>
+    </div>
+  </footer>
+
+  <div class="modal-backdrop" id="moreNavModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal">
+      <h3>More Pages</h3>
+      <div class="grid-2" style="margin-top:12px">
+        <div><ul>
+          <li><a href="scholarships.html">Scholarships</a></li><li><a href="resources.html">Resources</a></li><li><a href="admissions.html">Admissions</a></li><li><a href="fees.html">Fees & Financing</a></li><li><a href="placements.html">Placements</a></li>
+        </ul></div>
+        <div><ul>
+          <li><a href="alumni.html">Alumni</a></li><li><a href="events.html" class="active">Events / Webinars</a></li><li><a href="careers.html">Careers</a></li><li><a href="support.html">Support</a></li><li><a href="prospectus.html">Download Prospectus</a></li>
+        </ul></div>
+      </div>
+      <div style="margin-top:16px;display:flex;gap:8px;justify-content:flex-end"><button class="btn ghost" id="closeMoreNav">Close</button></div>
+    </div>
+  </div>
+  <script>
+    (function(){const o=document.getElementById('moreNavBtn'),m=document.getElementById('moreNavModal'),c=document.getElementById('closeMoreNav');if(!o||!m)return;const open=()=>{m.style.display='flex';m.setAttribute('aria-hidden','false')},close=()=>{m.style.display='none';m.setAttribute('aria-hidden','true')};o.addEventListener('click',open);c&&c.addEventListener('click',close);m.addEventListener('click',e=>{if(e.target===m)close()});document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});close();})();
+  </script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Meta -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Courses | AquaCraft Bottles</title>
+  <meta name="description" content="Explore AquaCraft Bottles’s courses across technology, design, and business. Learn online with live classes, projects, and mentorship." />
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+
+  <!-- Styles (same CSS) -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <!-- ===== Nav (same as index) ===== -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo" aria-label="AquaCraft Bottles Home">
+        <img src="assets/img/logo.svg" alt="AquaCraft Bottles Logo" />
+        <span>AquaCraft Bottles</span>
+      </a>
+
+      <nav class="menu" aria-label="Primary">
+        <a href="courses.html" class="active">Courses</a>
+        <a href="live-classes.html">Live Classes</a>
+        <a href="exams.html">Exams</a>
+        <a href="results.html">Results</a>
+        <a href="blog.html">Blog</a>
+        <button class="btn ghost" id="moreNavBtn" type="button">More</button>
+      </nav>
+
+      <div class="right">
+        <a class="btn ghost" href="login.html">Sign In</a>
+        <a class="btn" href="signup.html">Get Started</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="container">
+      <h1>Our Courses</h1>
+      <p>Choose from a wide range of programs designed for learners of all levels — from beginners to advanced professionals.</p>
+    </div>
+  </section>
+
+  <!-- ===== Courses Grid ===== -->
+  <main class="section container">
+    <h2>Explore Categories</h2>
+    <div class="cards-grid">
+      <!-- Technology -->
+      <article class="card">
+        <h3>Web Development</h3>
+        <p>Learn HTML, CSS, JavaScript, React, Node.js and more. Build projects and become job-ready.</p>
+        <a href="#" class="btn">View Details</a>
+      </article>
+
+      <article class="card">
+        <h3>Data Science</h3>
+        <p>Master Python, statistics, and machine learning. Work on real datasets and build predictive models.</p>
+        <a href="#" class="btn">View Details</a>
+      </article>
+
+      <article class="card">
+        <h3>Cybersecurity</h3>
+        <p>Understand network security, ethical hacking, and digital forensics with hands-on labs.</p>
+        <a href="#" class="btn">View Details</a>
+      </article>
+
+      <!-- Design -->
+      <article class="card">
+        <h3>UI/UX Design</h3>
+        <p>Learn wireframing, prototyping, and usability testing. Build design portfolios with real projects.</p>
+        <a href="#" class="btn">View Details</a>
+      </article>
+
+      <article class="card">
+        <h3>Graphic Design</h3>
+        <p>Explore Adobe Photoshop, Illustrator, and branding concepts. Ideal for creative professionals.</p>
+        <a href="#" class="btn">View Details</a>
+      </article>
+
+      <!-- Business -->
+      <article class="card">
+        <h3>Business Management</h3>
+        <p>Understand operations, leadership, and finance. Prepare for MBA or career advancement.</p>
+        <a href="#" class="btn">View Details</a>
+      </article>
+
+      <article class="card">
+        <h3>Digital Marketing</h3>
+        <p>Master SEO, SEM, content strategy, and social media ads with live campaigns.</p>
+        <a href="#" class="btn">View Details</a>
+      </article>
+    </div>
+  </main>
+
+  <!-- ===== CTA ===== -->
+  <section class="section container">
+    <div class="cta">
+      <h2>Not sure where to start?</h2>
+      <p>Take our quick quiz to find the right course for you.</p>
+      <a href="#" class="btn">Start Quiz</a>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="grid-2">
+        <div>
+          <h4>AquaCraft Bottles</h4>
+          <p class="blog-card meta">Upskilling made easy. Courses designed for today’s learners.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <p class="blog-card meta">
+            <a href="privacy.html">Privacy</a> •
+            <a href="terms.html">Terms</a> •
+            <a href="sitemap.html">Sitemap</a>
+          </p>
+        </div>
+      </div>
+      <p class="blog-card meta">© 2025 AquaCraft Bottles. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ===== More Nav Modal ===== -->
+  <div class="modal-backdrop" id="moreNavModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal">
+      <h3>More Pages</h3>
+      <div class="grid-2" style="margin-top:12px">
+        <div>
+          <ul>
+            <li><a href="scholarships.html">Scholarships</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="admissions.html">Admissions</a></li>
+            <li><a href="fees.html">Fees & Financing</a></li>
+            <li><a href="placements.html">Placements</a></li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li><a href="alumni.html">Alumni</a></li>
+            <li><a href="events.html">Events / Webinars</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="prospectus.html">Download Prospectus</a></li>
+          </ul>
+        </div>
+      </div>
+      <div style="margin-top:16px; display:flex; gap:8px; justify-content:flex-end">
+        <button class="btn ghost" id="closeMoreNav">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Minimal JS for modal ===== -->
+  <script>
+    (function () {
+      const openBtn = document.getElementById('moreNavBtn');
+      const modal = document.getElementById('moreNavModal');
+      const closeBtn = document.getElementById('closeMoreNav');
+
+      if (!openBtn || !modal) return;
+
+      const open = () => { modal.style.display = 'flex'; modal.setAttribute('aria-hidden', 'false'); };
+      const close = () => { modal.style.display = 'none'; modal.setAttribute('aria-hidden', 'true'); };
+
+      openBtn.addEventListener('click', open);
+      closeBtn && closeBtn.addEventListener('click', close);
+      modal.addEventListener('click', (e) => { if (e.target === modal) close(); });
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+
+      close();
+    })();
+  </script>
+</body>
+</html>
